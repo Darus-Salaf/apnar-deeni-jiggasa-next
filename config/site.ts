@@ -1,0 +1,27 @@
+export type SiteConfig = typeof siteConfig
+
+export const siteConfig = {
+  name: "আপনার দ্বীনই জিজ্ঞাসা",
+  description:
+    "কুরআন ও সহীহ সুন্নাহর আলোকে ইসলামি প্রশ্নোত্তরভিত্তিক নির্ভরযোগ্য ওয়েবসাইট।",
+  navItems: [
+    { label: "	মূলপাতা", href: "/" },
+    { label: "লিখিত", href: "/" },
+    { label: "ভিডিও", href: "/" },
+    { label: "নারী অঙ্গন", href: "/" },
+    { label: "দু'আ যিকর", href: "/" },
+    { label: "নাস্তিক্যবাদ", href: "/" },
+    { label: "ব্লগ", href: "/" },
+    { label: "আমাদের সম্পর্কে", href: "/" },
+  ],
+  navMenuItems: [
+    { label: "	মূলপাতা", href: "/" },
+    { label: "লিখিত", href: "/" },
+    { label: "ভিডিও", href: "/" },
+    { label: "নারী অঙ্গন", href: "/" },
+    { label: "দু'আ যিকর", href: "/" },
+    { label: "নাস্তিক্যবাদ", href: "/" },
+    { label: "ব্লগ", href: "/" },
+    { label: "আমাদের সম্পর্কে", href: "/" },
+  ],
+}
