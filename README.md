@@ -23,3 +23,22 @@ npm i
 ```bash
 npm run dev
 ```
+
+## Coding Styles
+
+### Component Structure
+
+```tsx
+// follow the importing serial, it will be automatically formatted with prettier if you format the document with shortcut keys.
+
+// 1. react modules imports
+// 2. nextjs modules imports
+// 3. third party modules imports
+// 4. types, config, lib, hooks modules imports
+// 5. component modules imports
+// 6. styling modules imports
+// 7. others modules imports
+export default function HomeNav() {
+  return <div>HomeNav</div>
+}
+```
