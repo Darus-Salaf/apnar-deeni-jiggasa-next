@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "আপনার দ্বীনই জিজ্ঞাসা",
+  name: "আপনার দ্বীনী জিজ্ঞাসা",
   description:
     "কুরআন ও সহীহ সুন্নাহর আলোকে ইসলামি প্রশ্নোত্তরভিত্তিক নির্ভরযোগ্য ওয়েবসাইট।",
   navItems: [
