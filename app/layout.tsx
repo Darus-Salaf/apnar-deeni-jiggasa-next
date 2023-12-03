@@ -6,7 +6,11 @@ import clsx from "clsx"
 
 import { fontSans } from "@/config/fonts"
 import { siteConfig } from "@/config/site"
-import { Navbar } from "@/components/navbar"
+import Header from "@/components/header/header"
+import Sidebar from "@/components/sidebar/sidebar"
+
+import s from "../styles/custom.module.css"
+// import { Navbar } from "@/components/navbar"
 
 import { Providers } from "./providers"
 
@@ -26,7 +30,6 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
 }
-
 export default function RootLayout({
   children,
 }: {
@@ -41,25 +44,30 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen">
-            <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 grow">
-              {children}
-            </main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current "
-                href="https://github.com"
-                title="Rabius Sunny Github"
-              >
-                <span className="text-default-600">Created by</span>
-                <p className=" text-pink-600">Rabius Sunny</p>
-              </Link>
-            </footer>
+        {/* <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}> */}
+        <div className={s.bgblur}></div>
+        <div className="relative flex flex-wrap  h-screen">
+          <div className=" w-full">
+            <Header />
           </div>
-        </Providers>
+          <div className=" max-md:hidden max-lg:hidden">
+            <Sidebar />
+          </div>
+          {/* <Navbar /> */}
+          <main className=" mx-auto max-w-7xl pt-16 px-6 grow">{children}</main>
+          <footer className="w-full flex items-center justify-center py-3">
+            <Link
+              isExternal
+              className="flex items-center gap-1 text-current "
+              href="https://github.com"
+              title="Rabius Sunny Github"
+            >
+              <span className="text-default-600">Created by</span>
+              <p className=" text-pink-600">Rabius Sunny</p>
+            </Link>
+          </footer>
+        </div>
+        {/* </Providers> */}
       </body>
     </html>
   )
